@@ -6,8 +6,7 @@ const footer = () => {
     footerEl.classList.add('footer');
     
     const smallEl =  document.createElement('small');
-    smallEl.textContent = '&copy; 2020 Made by CoderOO7';
-    
+    smallEl.textContent = '© 2020 Made by CoderOO7';
     footerEl.append(smallEl);
     body.append(footerEl);
 };

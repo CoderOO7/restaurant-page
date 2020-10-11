@@ -1,4 +1,4 @@
-const about = () => {P
+const about = () => {
 
 }
 

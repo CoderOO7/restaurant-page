@@ -38,8 +38,69 @@ html,body{
     text-decoration: none;
 }
 
+.nav__tab:hover{
+    cursor: pointer;
+    background-color: olivedrab;
+}
+
 #content{
+    display: flex;
     flex: 1 0 auto;
+}
+
+.home,.menu,.about,.contact{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home{
+    justify-content: center;
+    align-items: center;
+    font-size: 14vh;
+    font-weight: 900;
+}
+.contact{
+    justify-content: center;
+    align-items: center;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 70vh;
+    height: 80vh;
+    padding: 4em;
+    background: white;
+    margin: 0 auto;
+    border-radius: 0.8rem;
+}
+
+.contact-form__title{
+    font-size:3.4em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.contact-form__textarea{
+    height: 20em;
+}
+
+.contact-form__input, .contact-form__textarea{
+    padding: 1em;
+    border-radius: 0.2rem;
+}
+
+.contact-form__submit{
+    width: 10em;
+    padding: 0.8em;
+    border-radius: 2em;
+}
+
+.contact-form__input + .contact-form__input, .contact-form__textarea, .contact-form__submit {
+    margin-top: 1em;
 }
 
 .footer{

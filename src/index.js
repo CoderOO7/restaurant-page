@@ -1,5 +1,3 @@
-import loadNav from './modules/nav.js';
-import loadFooter from './modules/footer.js';
+import loadPage from './modules/page-load.js';
 
-loadNav();
-loadFooter();
+loadPage();

@@ -27,9 +27,10 @@ const nav = () => {
 
     function _createTab(nodeText,callback){
         const tab = document.createElement('a');
-        tab.classList.add('nav__tab');
-        tab.textContent = nodeText
+        tab.classList.add('nav__tab','nav__tab--active');
+        tab.textContent = nodeText;
         tab.addEventListener('click',()=>{
+            callback();
             console.log(`${nodeText} click`);
         });
 

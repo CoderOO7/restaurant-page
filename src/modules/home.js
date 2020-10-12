@@ -5,7 +5,12 @@ const home = () => {
     
     const section =  document.createElement('section'); 
     section.classList.add('home');
-    section.style.backgroundImage = `url('https://images.unsplash.com/photo-1559978137-8c560d91e9e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80')`;
+    section.style.backgroundImage = `
+    linear-gradient(
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0, 0, 0.45)
+      ),
+    url('https://images.unsplash.com/photo-1559978137-8c560d91e9e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80')`;
 
     const h1 = document.createElement('h1');
     h1.textContent = 'Indian food';

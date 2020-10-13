@@ -1,6 +1,6 @@
 const footer = () => {
     console.log("footer loaded");
-    const body = document.querySelector('body');
+    const content = document.getElementById('content');
     
     const footerEl = document.createElement('footer');
     footerEl.classList.add('footer');
@@ -8,7 +8,7 @@ const footer = () => {
     const smallEl =  document.createElement('small');
     smallEl.textContent = '© 2020 Made by CoderOO7';
     footerEl.append(smallEl);
-    body.append(footerEl);
+    content.insertAdjacentElement('afterend',footerEl);
 };
 
 export default footer;

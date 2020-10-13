@@ -68,8 +68,53 @@ html,body{
     color: white;
 }
 
+.menu__card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,50vh);
+    grid-auto-rows: min-content;
+    justify-content: center;
+    gap: 4%;
+    padding: 8vw;
+}
 
-.about__intro{
+.menu__block{
+    border: 2px solid black;
+}
+
+.menu__header{
+    display: flex;
+    border-bottom: 2px solid black;
+    font-size: 2em;
+    font-weight: 600;
+}
+.menu__num {
+    flex: 1 1 0;
+    border-right: 2px solid black;
+}
+.menu__title{
+    flex: 9 1 0;
+}
+
+.menu__item-list{
+    font-size: 1.8em;
+    color: #2f2f2f;
+    font-weight: 600;
+}
+
+.menu__item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__item-price {
+    font-style: italic;
+}
+
+.menu__header > *,.menu__item-list > * {
+    padding: 1vw;
+}
+
+.about__intro,.menu__intro{
     display: flex;
     justify-content: center;
     align-items: center;

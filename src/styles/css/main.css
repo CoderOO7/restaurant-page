@@ -1,3 +1,10 @@
+:root{
+    --brown: #B65A3C;
+    --pale-yellow: #CCCC25;
+    --chocolate: #3B3734;
+    --light-black: #2f2f2f;
+}
+
 *,::before,::after{
     box-sizing: border-box;
 }
@@ -19,29 +26,40 @@ html,body{
     display: flex;
     justify-content: space-between;
     font-size: 4vh;
-    padding: 0.8rem;
-    height: 10vh;
+    padding: 0.8rem 0;
+    color: var(--brown);
+    background-color: var(--chocolate);
+}
+
+.nav__misc{
+    padding: 0 2rem;
 }
 
 .nav__brand{
     font-size: 6vh;
     font-weight: 900;
+    color: var(--pale-yellow)
 }
-.nav__brand, .nav__items{
+
+.nav__toggle{
+    display: none;
+}
+
+.nav__items{
     display: flex;
 }
 
 .nav__tab{
     display: flex;
     align-items: center;
-    padding: 0 1em;
+    padding: 0 2rem;
     color: inherit;
     text-decoration: none;
 }
 
 .nav__tab:hover{
     cursor: pointer;
-    background-color: olivedrab;
+    color:  var(--pale-yellow);
 }
 
 #content{
@@ -97,7 +115,7 @@ html,body{
 
 .menu__item-list{
     font-size: 1.8em;
-    color: #2f2f2f;
+    color: var(--light-black);
     font-weight: 600;
 }
 
@@ -123,7 +141,6 @@ html,body{
     color: white;
     font-weight: 900;
 }
-
 
 .about__pg{
     padding: 14vh 12vw;
@@ -159,13 +176,13 @@ html,body{
 }
 
 .contact-form__title{
-    font-size:3.4em;
+    font-size:3.4vh;
     font-weight: 700;
     margin-bottom: 1em;
 }
 
 .contact-form__textarea{
-    height: 20em;
+    height: 20vh;
 }
 
 .contact-form__input, .contact-form__textarea{
@@ -188,4 +205,71 @@ html,body{
     font-size: 1.6em;
     padding: 1rem;
     justify-content: center;
+    color: var(--brown);
+    background-color: var(--chocolate);
+}
+
+@media all and (orientation:portrait){
+    .home{
+        font-size: 14vw;
+    }
+    .nav{
+        font-size: 4vw;
+    }
+    .nav__brand{
+        font-size: 6vw;
+    }   
+
+    .contact-form{
+        width: 70vw;
+        height: 100vw;
+    }
+    .contact-form__title{
+        font-size:3.4vw;
+        margin-bottom: 1vw;
+    }
+    
+    .contact-form__textarea{
+        height: 20vw;
+    }
+}
+
+@media (max-width: 48rem){
+    .nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 4vw;
+        padding: 0.8rem 0;
+    }
+    .nav__misc{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .nav__brand{
+        padding: 1rem 0;
+        color: var(--pale-yellow)
+    }
+    .nav__toggle{
+        display: flex;
+        align-items:center;
+    }
+    .nav__toggle:hover{
+        cursor: pointer;
+        color: var(--pale-yellow);
+    }
+    .nav__items{
+        display: none;
+        flex-direction: column;
+    }
+    .nav__items--active{
+        display: flex;
+    }
+    .nav__tab{
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+    
 }

@@ -8,21 +8,39 @@ const nav = () => {
     
     const body = document.querySelector('body');
     const content = document.getElementById('content');
+    
     const nav = document.createElement('nav');
+    nav.classList.add('nav');
 
-    function _createNavBrand(nodeText){
-        const brand = document.createElement('div');
+    function _createNavToggle(){
+       
+        const navToggle = document.createElement('a');
+        navToggle.classList.add('nav__toggle');
+        navToggle.innerHTML = `<i class="fas fa-bars" aria-hidden="true"></i>`;
+        navToggle.addEventListener('click',()=>{
+            const navItems = document.querySelector('.nav__items');
+            navItems.classList.toggle('nav__items--active');
+        })
+
+        return navToggle;
+    }
+
+    function _createNavMisc(nodeText){
+        const misc = document.createElement('div');
+        misc.classList.add('nav__misc');
+
+        const brand = document.createElement('a');
         brand.classList.add('nav__brand');
+        brand.textContent = nodeText;
         brand.addEventListener('click',()=> {
             console.log("brand click");
         })
-        
-        const brandName = document.createElement('a');
-        brandName.classList.add('nav__brand-name');
-        brandName.textContent = nodeText;
 
-        brand.append(brandName);
-        return brand;
+        const navToggle = _createNavToggle();
+        
+
+        misc.append(brand,navToggle);
+        return misc;
     }
 
     function _createTab(nodeText,callback){
@@ -54,14 +72,13 @@ const nav = () => {
         return items;
     }
 
+    
+
     function _createNav(){
-        const navTitle = _createNavBrand('Ashnam');
+        const navMisc = _createNavMisc('Ashnam');
         const navItems = _createNavItems();
-
-        nav.classList.add('nav');
-
-        nav.append(navTitle);
-        nav.append(navItems);
+        
+        nav.append(navMisc,navItems);
     }
 
     function loadNav(){

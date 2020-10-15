@@ -1,4 +1,4 @@
-import {clear} from './utils.js'
+import {clear} from '../utils.js'
 
 const contact = () => {
     const content = document.getElementById('content');

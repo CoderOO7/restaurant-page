@@ -1,7 +1,7 @@
-import loadHome from './home.js';
-import loadMenu from './menu.js';
-import loadAbout from './about.js';
-import loadContact from './contact.js';
+import loadHome from './tabs/home.js';
+import loadMenu from './tabs/menu.js';
+import loadAbout from './tabs/about.js';
+import loadContact from './tabs/contact.js';
 
 const nav = () => {
     console.log("nav loaded");

@@ -1,4 +1,4 @@
-import { clear } from './utils.js';
+import { clear } from '../utils.js';
 
 const menu = () => {
     console.log('menu loaded');

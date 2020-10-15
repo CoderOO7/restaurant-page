@@ -3,6 +3,9 @@
     --pale-yellow: #CCCC25;
     --chocolate: #3B3734;
     --light-black: #2f2f2f;
+    --primary :#007BFF;
+    --success: #28A745;
+    --warning: #FFC107;
 }
 
 *,::before,::after{
@@ -36,6 +39,7 @@ body{
 .nav__brand{
     font-size: 6vh;
     font-weight: 900;
+    font-family: 'Sacramento', cursive;
     color: var(--pale-yellow)
 }
 
@@ -99,7 +103,7 @@ body{
 .menu__header{
     display: flex;
     border-bottom: 2px solid black;
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: 600;
 }
 .menu__num {
@@ -173,7 +177,7 @@ body{
 }
 
 .contact-form__title{
-    font-size:3.4vh;
+    font-size:3.8vh;
     font-weight: 700;
     margin-bottom: 1em;
 }
@@ -183,14 +187,33 @@ body{
 }
 
 .contact-form__input, .contact-form__textarea{
-    padding: 1em;
-    border-radius: 0.2rem;
+    padding: 2vh;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-radius:0.8rem;
+    border:1px solid var(--light-black);
+}
+
+.contact-form__input:focus, .contact-form__textarea:focus,.contact-form__submit:focus,
+.contact-form__input:active, .contact-form__textarea:active,.contact-form_.contact-form__submit:active{
+    outline:none;
+    border: 2px solid var(--pale-yellow);
 }
 
 .contact-form__submit{
-    width: 10em;
+    width: 20vh;
     padding: 0.8em;
     border-radius: 2em;
+    color: white;
+    background-color: var(--primary);
+}
+
+.contact-form__submit:hover{
+    cursor: pointer;
+    background-color: var(--success);
 }
 
 .contact-form__input + .contact-form__input, .contact-form__textarea, .contact-form__submit {
@@ -218,7 +241,7 @@ body{
     }  
     
     .menu__header{
-        font-size: 4vw;
+        font-size: 3vw;
     }
     .menu__item-list{
         font-size: 2.8vw;
@@ -226,15 +249,22 @@ body{
 
     .contact-form{
         width: 70vw;
-        height: 100vw;
+        height: 90vmin;
     }
     .contact-form__title{
-        font-size:3.4vw;
+        font-size:3.8vw;
         margin-bottom: 1vw;
     }
     
     .contact-form__textarea{
         height: 20vw;
+    }
+
+    .contact-form__input, .contact-form__textarea{
+        padding: 2vw;
+    }
+    .contact-form__submit{
+        width: 20vh;
     }
 }
 

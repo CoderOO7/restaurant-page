@@ -15,13 +15,14 @@ const home = () => {
     const h1 = document.createElement('h1');
     h1.textContent = 'Indian food';
 
-    function loadHome(){
+    /* Append the Home tab content to DOM */
+    const _loadHome = () => {
         clear(content);        
         section.append(h1);
         content.append(section);
     }
 
-    return loadHome();
+    return _loadHome();
 }
 
 export default home;

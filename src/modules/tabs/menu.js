@@ -1,7 +1,6 @@
 import { clear } from '../utils.js';
 
 const menu = () => {
-    console.log('menu loaded');
     const content = document.getElementById('content');
 
     const menuSection = document.createElement('section');
@@ -78,6 +77,11 @@ const menu = () => {
         }
     ]
 
+    /**
+     * Return the menuCard DOM element.
+     * @param {object} data - The array of object of menu items. 
+     * @return {object} menuCard - The DOM element
+     */
     function createDynamicMenuCard(data) {
         const menuCard = document.createElement('div');
         menuCard.classList.add('menu__card');
@@ -130,14 +134,14 @@ const menu = () => {
     pageContent.append(menuCard);
     menuIntro.append(h1);
     menuSection.append(menuIntro, pageContent);
-
-    function loadMenu() {
+    
+    /* Append the Menu tab content to DOM */
+    const loadMenu = () => {
         clear(content);
         content.append(menuSection);
     }
 
     return loadMenu();
-
 }
 
 export default menu;

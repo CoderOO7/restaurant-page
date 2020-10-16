@@ -44,12 +44,13 @@ const contact = () => {
     form.append(msgTextArea);
     form.append(submitBtn);
     
-    function loadContact(){
+    /* Append the Contact tab content to DOM */
+    const _loadContact = () => {
         clear(content);
         content.append(section);
     }
 
-    return loadContact();
+    return _loadContact();
 
 }    
 

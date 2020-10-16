@@ -38,13 +38,13 @@ const about = () => {
     aboutSection.append(aboutIntro);
     aboutSection.append(pageContent);
     
-    function loadAbout(){
+    /* Append the About tab conent to DOM */
+    const _loadAbout = () => {
         clear(content);        
         content.append(aboutSection);
     }
 
-    return loadAbout();
-
+    return _loadAbout();
 }
 
 export default about;

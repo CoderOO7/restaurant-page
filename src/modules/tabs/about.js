@@ -13,7 +13,7 @@ const about = () => {
         rgba(0, 0, 0, 0.45), 
         rgba(0, 0, 0, 0.45)
       ),
-    url('https://images.unsplash.com/photo-1553739340-4043e61e457a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')`;
+    url('static/images/about_intro.jpeg')`;
     
     const h1 = document.createElement('h1');
     h1.textContent = 'ABOUT';
@@ -21,7 +21,7 @@ const about = () => {
 
     const pageContent =  document.createElement('div');
     pageContent.classList.add('about__pg');
-    pageContent.style.backgroundImage = `url('https://images.getbento.com/accounts/898ab47b83409ea68f443a6e1d343174/media/images/732831183ricepaper-12.jpeg')`;
+    pageContent.style.backgroundImage = `url('static/images/tabs_pg_bg.jpeg')`;
     
     const h2 = document.createElement('h2');
     h2.classList.add('about__pg-h2');

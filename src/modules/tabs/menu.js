@@ -14,7 +14,7 @@ const menu = () => {
         rgba(0, 0, 0, 0.45), 
         rgba(0, 0, 0, 0.45)
       ),
-    url('https://images.unsplash.com/photo-1514573308375-84a13ac77f42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')`;
+    url('static/images/menu_intro_bg.jpeg')`;
 
     const h1 = document.createElement('h1');
     h1.textContent = 'MENU';
@@ -22,7 +22,7 @@ const menu = () => {
 
     const pageContent = document.createElement('div');
     pageContent.classList.add('menu__pg');
-    pageContent.style.backgroundImage = `url('https://images.getbento.com/accounts/898ab47b83409ea68f443a6e1d343174/media/images/732831183ricepaper-12.jpeg')`;
+    pageContent.style.backgroundImage = `url('static/images/tabs_pg_bg.jpeg')`;
 
     const h2 = document.createElement('h2');
     h2.classList.add('menu__pg-h2');

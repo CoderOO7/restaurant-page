@@ -5,7 +5,7 @@ const contact = () => {
 
     const section = document.createElement('section');
     section.classList.add('contact');
-    section.style.backgroundImage = `url('https://images.unsplash.com/photo-1543191878-2baa4ff8a570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')`
+    section.style.backgroundImage = `url('static/images/contact_bg.jpeg')`
 
     const form = document.createElement('form');
     form.classList.add('contact-form');

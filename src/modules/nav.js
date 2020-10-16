@@ -1,8 +1,3 @@
-import loadHome from './tabs/home.js';
-import loadMenu from './tabs/menu.js';
-import loadAbout from './tabs/about.js';
-import loadContact from './tabs/contact.js';
-
 const nav = () => {
     console.log("nav loaded");
     
@@ -37,21 +32,17 @@ const nav = () => {
         })
 
         const navToggle = _createNavToggle();
-        
 
         misc.append(brand,navToggle);
         return misc;
     }
 
-    function _createTab(nodeText,callback){
+    function _createTab(nodeText){
         const tab = document.createElement('a');
-        tab.classList.add('nav__tab','nav__tab--active');
-        tab.textContent = nodeText;
-        tab.addEventListener('click',()=>{
-            callback();
-            console.log(`${nodeText} click`);
-        });
-
+        nodeText === 'Home' ? tab.classList.add('nav__tab', 'nav__tab--active')
+                            : tab.classList.add('nav__tab'); 
+        tab.setAttribute('data-tab',`${nodeText}`);
+        tab.textContent = `${nodeText}`;
         return tab;
     }
 
@@ -59,10 +50,10 @@ const nav = () => {
         const items = document.createElement('div');
         items.classList.add('nav__items');
 
-        const homeTab = _createTab('Home',loadHome);
-        const menuTab = _createTab('Menu',loadMenu);
-        const aboutTab = _createTab('About',loadAbout);
-        const contactTab = _createTab('Contact',loadContact);
+        const homeTab = _createTab('Home');
+        const menuTab = _createTab('Menu');
+        const aboutTab = _createTab('About');
+        const contactTab = _createTab('Contact');
 
         items.append(homeTab);
         items.append(menuTab);

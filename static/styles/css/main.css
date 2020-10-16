@@ -59,6 +59,10 @@ body{
     text-decoration: none;
 }
 
+.nav__tab--active{
+    color: var(--pale-yellow);
+}
+
 .nav__tab:hover{
     cursor: pointer;
     color:  var(--pale-yellow);

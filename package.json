@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build":"webpack --mode=production",
+    "dev":"webpack-dev-server --content-base dist --mode=development",
+    "deploy":"npm run build && git subtree push --prefix dist origin",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "CoderOO7 <shubhamyadav.70007@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "path": "^0.12.7",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
